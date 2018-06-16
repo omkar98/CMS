@@ -28,9 +28,9 @@ foreach($db as $key=>$value)
     /*Here we are refernecing to array $db with uppercase $KEY, and storing the constant into the variable, thereby making it constant variabe.*/
 }
 $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-if($connection)
+if(!$connection)
 {
-    echo "Connection Establised!";
+    echo "Oops! Disconnection";
 }
 /*
 A simple way to connect, but it isn't not that secured...
