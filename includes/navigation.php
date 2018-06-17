@@ -1,4 +1,5 @@
-   <?php include "db.php";
+       <?php //require_once('db.php');
+    require_once ("db.php");
     $query = "SELECT * FROM categories";
     $result = mysqli_query($connection,$query);
     ?>

@@ -1,0 +1,9 @@
+mysqli_fetch_assoc();
+mysqli_query();
+mysqli_error($connection);
+mysqli_num_rows($search_query);
+/*where $search_query = mysqli_num_rows($connection, $query);*/
+
+$query = "SELECT * FROM ______";
+$query = "SELECT * FROM ______ WHERE post_tags LIKE '%$search%'";
+$query = "SELECT * FROM categories LIMIT 4";
