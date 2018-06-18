@@ -7,3 +7,5 @@ mysqli_num_rows($search_query);
 $query = "SELECT * FROM ______";
 $query = "SELECT * FROM ______ WHERE post_tags LIKE '%$search%'";
 $query = "SELECT * FROM categories LIMIT 4";
+
+$query = "INSERT INTO categories(cat_title) VALUES ('$cat_title')"

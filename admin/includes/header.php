@@ -1,3 +1,4 @@
+<?php ob_start(); //output buffer start function?>
 <?php include "../includes/db.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
