@@ -14,7 +14,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MGM's College of Engineering</a>
+                <a class="navbar-brand" href="#">MGM's College of Engineering, Nanded</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -33,6 +33,7 @@
                         $row = mysqli_fetch_assoc($result); 
                     }
                     ?>
+                    <li><a href='admin'>Admin</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
