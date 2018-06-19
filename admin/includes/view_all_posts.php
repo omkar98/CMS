@@ -39,9 +39,25 @@ while($row)
     echo "<td>{$post_tags}</td>";
     echo "<td>{$post_comments}</td>";
     echo "<td>{$post_date}</td>";
+    echo "<td><a href='posts.php?delete={$post_id}'><i class='fa fa-trash' aria-hidden='true'></i></a></td>";
     echo "</tr>"; 
     $row = mysqli_fetch_assoc($result); 
 }
+    if(isset($_GET['delete']))
+    {
+        $deleted_post=$_GET['delete'];
+        $query = "DELETE FROM posts WHERE post_id = {$deleted_post}";
+        $deletion = mysqli_query($connection, $query);
+        if(!$deletion)
+        {
+            die('Delete Query Failed'.mysqli_error($connection));
+        }
+        else
+        {
+            header("Location: posts.php");
+        }        
+    }
+    
 ?>
 </tbody>
 </table>

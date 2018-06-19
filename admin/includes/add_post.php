@@ -1,3 +1,4 @@
+<?php global $count_posts;?>
 <?php if(isset($_POST['create_post']))   
 {
     $post_title = $_POST['title'];  
@@ -23,6 +24,10 @@
     if(!$create_post_query)
     {
         die('QUERY FAILED' . mysqli_error($connection));
+    }
+    else
+    {
+        echo "Post created Successfully!";
     }
 }
 
