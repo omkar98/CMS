@@ -9,3 +9,10 @@ $query = "SELECT * FROM ______ WHERE post_tags LIKE '%$search%'";
 $query = "SELECT * FROM categories LIMIT 4";
 
 $query = "INSERT INTO categories(cat_title) VALUES ('$cat_title')"
+
+$post_image = $_FILES['image']['name'];  
+$post_image_temp = $_FILES['image']['tmp_name'];   
+
+$post_date = date('d-m-y');
+
+move_uploaded_file($post_image_temp, "../images/$post_image");
