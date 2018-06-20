@@ -40,8 +40,8 @@
                             case 'add_post':
                                 include "includes/add_post.php";
                                 break;
-                            case 2:
-                                echo "We are in 1";
+                            case 'edit_post':
+                                include "includes/edit_post.php";;
                                 break;
                             case 3:
                                 echo "We are in 1";
@@ -50,7 +50,6 @@
                                 echo "We are in 1";
                                 break;
                             default:
-                                "Lets look at the table: ";
                                 include "includes/view_all_posts.php";   
                         }
                      ?>

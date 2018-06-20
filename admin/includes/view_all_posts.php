@@ -39,6 +39,7 @@ while($row)
     echo "<td>{$post_tags}</td>";
     echo "<td>{$post_comments}</td>";
     echo "<td>{$post_date}</td>";
+    echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'><i class='fa fa-pencil' aria-hidden='true'></i></a></td>";
     echo "<td><a href='posts.php?delete={$post_id}'><i class='fa fa-trash' aria-hidden='true'></i></a></td>";
     echo "</tr>"; 
     $row = mysqli_fetch_assoc($result); 
