@@ -32,7 +32,13 @@ while($row)
     echo "<td>{$post_id}</td>";
     echo "<td>{$post_author}</td>";
     echo "<td>{$post_title}</td>";
-    echo "<td>{$post_category_id}</td>";
+    
+    $query_to_get_cat_title = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
+    $required_cat = mysqli_query($connection,$query_to_get_cat_title);
+    $required_row = mysqli_fetch_assoc($required_cat); 
+    
+    
+    echo "<td>{$required_row['cat_title']}</td>";
     echo "<td>{$post_status}</td>";
     //echo "<td>{$post_image}</td>";
     echo "<td><img width='100' src='../images/$post_image' alt='image'></td>";

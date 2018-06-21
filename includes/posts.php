@@ -31,7 +31,11 @@ while($row)
         <p><?php echo $post_content ?></p>
         <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
         <hr>
-        <!-- Pager -->
+<?php
+    $row=mysqli_fetch_assoc($result);
+}
+?>
+<!-- Pager -->
         <ul class="pager">
             <li class="previous">
                 <a href="#">&larr; Older</a>
@@ -40,7 +44,3 @@ while($row)
                 <a href="#">Newer &rarr;</a>
             </li>
         </ul>
-<?php
-    $row=mysqli_fetch_assoc($result);
-}
-?>
