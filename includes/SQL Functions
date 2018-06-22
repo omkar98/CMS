@@ -16,3 +16,9 @@ $post_image_temp = $_FILES['image']['tmp_name'];
 $post_date = date('d-m-y');
 
 move_uploaded_file($post_image_temp, "../images/$post_image");
+
+<a href='posts.php?source=edit_post&p_id={$post_id}'><i class='fa fa-pencil' aria-hidden='true'></i></a>
+Here when the user clicks, the href directs to edit_post.php page within the posts.php page and passes p_id as an argument. This direction to another page is done using [source = ""] and p_id caught using a $_GET variable.
+
+$post_content = substr($row['post_content], 0,100);
+substr() has 3 parameters. If we want to display a string only between 0 - 100th characters, then this function is very userful. This can be used to display a part of blog post in the main home page. 
